@@ -1,11 +1,11 @@
-package org.sevensevennine.javaansi;
+package org.sevensevennine.console;
 
 import java.util.Map;
 
 /**
  * Возвращает модифицированный текст с ANSI-кодами стиля и цвета. 
  */
-public class JavaANSI {
+public class ANSI {
   private static String ANSIResetCode = "\033[0m";
   
   private static Map<String, String> ANSIColorCodes = Map.of(

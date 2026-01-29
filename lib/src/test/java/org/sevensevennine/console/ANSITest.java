@@ -1,11 +1,11 @@
-package org.sevensevennine.javaansi;
+package org.sevensevennine.console;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class JavaANSITest {
-    @Test void testColoredWithValidParameters() {
-        String result = JavaANSI.colored("Test", "green", "bold");
+public class ANSITest {
+  @Test void testColoredWithValidParameters() {
+        String result = ANSI.colored("Test", "green", "bold");
         
         assertTrue(result.startsWith("\033["));
         assertTrue(result.contains("Test"));
@@ -13,12 +13,12 @@ class JavaANSITest {
     }
 
     @Test void testColoredWithInvalidColor() {
-        String result = JavaANSI.colored("Test", "invalid", "bold");
+        String result = ANSI.colored("Test", "invalid", "bold");
         assertEquals("Test", result);
     }
 
     @Test void testColoredWithInvalidStyle() {
-        String result = JavaANSI.colored("Test", "green", "invalid");
+        String result = ANSI.colored("Test", "green", "invalid");
         assertEquals("Test", result);
     }
 }
